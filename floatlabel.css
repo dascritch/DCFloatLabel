@@ -18,9 +18,18 @@
 	opacity : 1 ;
 	top : 0;
 }
-.modified .field input:invalid , .modified  .field textarea:invalid {
+.field :invalid {
 	border : none;
 	box-shadow: none;
+}
+.field :invalid:before {
+	border : none;
+	box-shadow: none;
+}
+
+.modified .field :invalid /*.modified .field input:invalid , .modified  .field textarea:invalid */{
+	/*border : none;
+	box-shadow: none;*/
 	background-image: linear-gradient(top, rgba(0,0,0,0) 31%, rgba(255,0,0,0.2) 80%);
 	background-image: -o-linear-gradient(top, rgba(0,0,0,0) 31%, rgba(255,0,0,0.2) 80%);
 	background-image: -moz-linear-gradient(top, rgba(0,0,0,0) 31%, rgba(255,0,0,0.2) 80%);

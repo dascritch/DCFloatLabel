@@ -57,17 +57,18 @@
 	border-bottom : 1px solid #cce ;
 }
 
-#comment-1stline .field {
-	float : left;
-	width : 49%;
+@media only screen and (min-width:479px) {
+	#comment-1stline .field {
+		float : left;
+		width : 49%;
+	}
+	#g_site {
+		border-left : 1px solid #cce ;
+	}
 }
 
 #comment-2ndline {
 	border-bottom : 1px solid #cce ;
-}
-
-#g_site {
-	border-left : 1px solid #cce ;
 }
 
 #form-help {

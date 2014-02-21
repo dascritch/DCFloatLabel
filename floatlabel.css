@@ -1,3 +1,11 @@
+/** reset sur les sites déjàs placés **/
+
+.field input:focus, .field textarea:focus { /* because compressed l272 */
+	background : none;
+}
+
+/** code réel" **/
+ 
 #comment-form {
 	position : relative;
 }
@@ -27,18 +35,6 @@
 	box-shadow: none;
 }
 
-.modified .field :invalid {
-	/*border : none;
-	box-shadow: none;*/
-	/*background : white;*/
-	
-	background-image: linear-gradient(			top, #EEF 0%, #FFF 30%);
-	background-image: -o-linear-gradient(		top, #EEF 0%, #FFF 30%);
-	background-image: -moz-linear-gradient(		top, #EEF 0%, #FFF 30%);
-	background-image: -webkit-linear-gradient(	top, #EEF 0%, #FFF 30%);
-	background-image: -ms-linear-gradient(		top,#EEF 0%, #FFF 30%);
-}
-
 .field input , .field textarea , .field :focus  {
 	margin  : 0;
 	outline : none;
@@ -47,6 +43,14 @@
 	font-family: Titillium Web, sans-serif;
 	background : transparent;
 	width: 95%;
+}
+
+.modified .field :invalid {
+	background-image: linear-gradient(			top, #EEF 0%, #FFF 30%);
+	background-image: -o-linear-gradient(		top, #EEF 0%, #FFF 30%);
+	background-image: -moz-linear-gradient(		top, #EEF 0%, #FFF 30%);
+	background-image: -webkit-linear-gradient(	top, #EEF 0%, #FFF 30%);
+	background-image: -ms-linear-gradient(		top,#EEF 0%, #FFF 30%);
 }
 
 #comment-1stline {

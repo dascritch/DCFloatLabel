@@ -30,13 +30,13 @@
 .modified .field :invalid {
 	/*border : none;
 	box-shadow: none;*/
-	background : white;
-	/*
-	background-image: linear-gradient(top, rgba(0,0,0,0) 31%, rgba(255,0,0,0.2) 80%);
-	background-image: -o-linear-gradient(top, rgba(0,0,0,0) 31%, rgba(255,0,0,0.2) 80%);
-	background-image: -moz-linear-gradient(top, rgba(0,0,0,0) 31%, rgba(255,0,0,0.2) 80%);
-	background-image: -webkit-linear-gradient(top, rgba(0,0,0,0) 31%, rgba(255,0,0,0.2) 80%);
-	background-image: -ms-linear-gradient(top, rgba(0,0,0,0) 31%, rgba(255,0,0,0.2) 80%);*/
+	/*background : white;*/
+	
+	background-image: linear-gradient(			top, #EEF 0%, #FFF 30%);
+	background-image: -o-linear-gradient(		top, #EEF 0%, #FFF 30%);
+	background-image: -moz-linear-gradient(		top, #EEF 0%, #FFF 30%);
+	background-image: -webkit-linear-gradient(	top, #EEF 0%, #FFF 30%);
+	background-image: -ms-linear-gradient(		top,#EEF 0%, #FFF 30%);
 }
 
 .field input , .field textarea , .field :focus  {
@@ -48,7 +48,7 @@
 }
 
 #comment-1stline {
-	border-bottom : 1px solid #ccc ;
+	border-bottom : 1px solid #cce ;
 }
 
 #comment-1stline .field {
@@ -57,11 +57,11 @@
 }
 
 #comment-2ndline {
-	border-bottom : 1px solid #ccc ;
+	border-bottom : 1px solid #cce ;
 }
 
 #c_name {
-	border-right : 1px solid #ccc ;	
+	border-right : 1px solid #cce ;	
 }
 
 #form-help {

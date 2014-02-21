@@ -40,12 +40,13 @@
 }
 
 .field input , .field textarea , .field :focus  {
-	font-family: Titillium Web;
+	margin  : 0;
+	outline : none;
 	border : none;
 	border-radius: 0px;
+	font-family: Titillium Web, sans-serif;
 	background : transparent;
 	width: 95%;
-	outline : none;
 }
 
 #comment-1stline {
@@ -61,8 +62,8 @@
 	border-bottom : 1px solid #cce ;
 }
 
-#c_name {
-	border-right : 1px solid #cce ;	
+#g_site {
+	border-left : 1px solid #cce ;
 }
 
 #form-help {

@@ -39,9 +39,10 @@
 	background-image: -ms-linear-gradient(top, rgba(0,0,0,0) 31%, rgba(255,0,0,0.2) 80%);*/
 }
 
-.field input , .field textarea , .field input:focus , .field textarea:focus {
+.field input , .field textarea , .field :focus  {
 	font-family: Titillium Web;
 	border : none;
+	border-radius: 0px;
 	background : transparent;
 	width: 95%;
 }

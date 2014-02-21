@@ -74,6 +74,7 @@ textarea:focus ~ #form-help {
 }
 
 #comment-form button {
+
 	color: rgb(238, 238, 238);
 	font-size: 0.875em;
 	display: inline-block;

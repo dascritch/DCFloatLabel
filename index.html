@@ -160,19 +160,22 @@ Tellement bien raisonné et empli de bon sens que je vais le lire de très très
 	<form action="#pr" method="post" id="comment-form">
 				
 		<h3>Ajouter un commentaire</h3>
-		<fieldset>
+		<fieldset id="comment-1stline">
 
 			<p class="field">
 			<label for="c_name">Nom ou pseudo&nbsp;:</label>
 				<input name="c_name" id="c_name" size="30" maxlength="255" required="required" type="text" placeholder="Nom ou pseudo&nbsp;:">
 			</p>
 			
-			<p class="field"><label for="c_mail">Adresse e-mail&nbsp;:</label>
-				<input name="c_mail" id="c_mail" size="30" maxlength="255" required="required" type="email" placeholder="Adresse e-mail&nbsp;:">
-			</p>
-			
 			<p class="field"><label for="c_site">Site web (facultatif)&nbsp;:</label>
 				<input name="c_site" id="c_site" size="30" maxlength="255" type="url" placeholder="Site web (facultatif)&nbsp;:">
+			</p>
+
+		</fieldset>
+		<fieldset>
+
+			<p class="field"><label for="c_mail">Adresse e-mail&nbsp;:</label>
+				<input name="c_mail" id="c_mail" size="30" maxlength="255" required="required" type="email" placeholder="Adresse e-mail&nbsp;:">
 			</p>
 			
 			<p style="display:none">

@@ -1,3 +1,11 @@
+/** reset sur les sites déjàs placés **/
+
+.field input:focus, .field textarea:focus { /* because compressed l272 */
+	background : none;
+}
+
+/** code réel" **/
+ 
 #comment-form {
 	position : relative;
 }
@@ -27,27 +35,26 @@
 	box-shadow: none;
 }
 
-.modified .field :invalid {
-	/*border : none;
-	box-shadow: none;*/
-	background : white;
-	/*
-	background-image: linear-gradient(top, rgba(0,0,0,0) 31%, rgba(255,0,0,0.2) 80%);
-	background-image: -o-linear-gradient(top, rgba(0,0,0,0) 31%, rgba(255,0,0,0.2) 80%);
-	background-image: -moz-linear-gradient(top, rgba(0,0,0,0) 31%, rgba(255,0,0,0.2) 80%);
-	background-image: -webkit-linear-gradient(top, rgba(0,0,0,0) 31%, rgba(255,0,0,0.2) 80%);
-	background-image: -ms-linear-gradient(top, rgba(0,0,0,0) 31%, rgba(255,0,0,0.2) 80%);*/
-}
-
-.field input , .field textarea , .field input:focus , .field textarea:focus {
-	font-family: Titillium Web;
+.field input , .field textarea , .field :focus  {
+	margin  : 0;
+	outline : none;
 	border : none;
+	border-radius: 0px;
+	font-family: Titillium Web, sans-serif;
 	background : transparent;
 	width: 95%;
 }
 
+.modified .field :invalid {
+	background-image: linear-gradient(			top, #EEF 0%, #FFF 30%);
+	background-image: -o-linear-gradient(		top, #EEF 0%, #FFF 30%);
+	background-image: -moz-linear-gradient(		top, #EEF 0%, #FFF 30%);
+	background-image: -webkit-linear-gradient(	top, #EEF 0%, #FFF 30%);
+	background-image: -ms-linear-gradient(		top,#EEF 0%, #FFF 30%);
+}
+
 #comment-1stline {
-	border-bottom : 1px solid #ccc ;
+	border-bottom : 1px solid #cce ;
 }
 
 #comment-1stline .field {
@@ -56,11 +63,11 @@
 }
 
 #comment-2ndline {
-	border-bottom : 1px solid #ccc ;
+	border-bottom : 1px solid #cce ;
 }
 
-#c_name {
-	border-right : 1px solid #ccc ;	
+#g_site {
+	border-left : 1px solid #cce ;
 }
 
 #form-help {
@@ -85,11 +92,11 @@ textarea:focus ~ #form-help {
 	border: 1px solid rgb(104, 104, 103);
 	border-radius: 5px;
 	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
-	background-image: linear-gradient( top , rgb(119, 119, 119) 0px, rgb(85, 85, 85) 100%);
-	background-image: -o-linear-gradient( top , rgb(119, 119, 119) 0px, rgb(85, 85, 85) 100%);
-	background-image: -moz-linear-gradient( top , rgb(119, 119, 119) 0px, rgb(85, 85, 85) 100%);
-	background-image: -webkit-linear-gradient( top , rgb(119, 119, 119) 0px, rgb(85, 85, 85) 100%);
-	background-image: -ms-linear-gradient( top , rgb(119, 119, 119) 0px, rgb(85, 85, 85) 100%);
+	background-image: linear-gradient(			top , rgb(119, 119, 119) 0px, rgb(85, 85, 85) 100%);
+	background-image: -o-linear-gradient(		top , rgb(119, 119, 119) 0px, rgb(85, 85, 85) 100%);
+	background-image: -moz-linear-gradient(		top , rgb(119, 119, 119) 0px, rgb(85, 85, 85) 100%);
+	background-image: -webkit-linear-gradient(	top , rgb(119, 119, 119) 0px, rgb(85, 85, 85) 100%);
+	background-image: -ms-linear-gradient(		top , rgb(119, 119, 119) 0px, rgb(85, 85, 85) 100%);
 	transition-property: opacity;
 	transition-duration: 0.4s;  
 	position : relative;

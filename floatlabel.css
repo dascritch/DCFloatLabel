@@ -11,38 +11,39 @@
 }
 
 .field {
-	border : 0 1px 1px 1px solid black;
 	margin : 0;
 	padding : 0;
+	border : 0 1px 1px 1px solid black;
 }
+
 .field label { 
 	position: relative;  
-	opacity : 0  ; 	
+	top:0.8em;
+	opacity : 0; 	
 	transition-property: opacity top;
 	transition-duration: 0.4s;  
-	top:0.8em;
 }
 .field.notEmpty label { 
-	opacity : 1 ;
 	top : 0;
+	opacity : 1 ;
 }
 .field :invalid {
 	border : none;
-	box-shadow: none;
+	box-shadow : none;
 }
 .field :invalid:before {
 	border : none;
-	box-shadow: none;
+	box-shadow : none;
 }
 
-.field input , .field textarea , .field :focus  {
+.field input, .field textarea, .field :focus  {
 	margin  : 0;
 	outline : none;
+	width: 95%;
+	background : transparent;
 	border : none;
 	border-radius: 0px;
 	font-family: Titillium Web, sans-serif;
-	background : transparent;
-	width: 95%;
 }
 
 .modified .field :invalid {
@@ -50,7 +51,7 @@
 	background-image: -o-linear-gradient(		top, #EEF 0%, #FFF 30%);
 	background-image: -moz-linear-gradient(		top, #EEF 0%, #FFF 30%);
 	background-image: -webkit-linear-gradient(	top, #EEF 0%, #FFF 30%);
-	background-image: -ms-linear-gradient(		top,#EEF 0%, #FFF 30%);
+	background-image: -ms-linear-gradient(		top, #EEF 0%, #FFF 30%);
 }
 
 #comment-1stline {
@@ -72,8 +73,8 @@
 }
 
 #form-help {
+	display : block;
 	opacity: 0;
-	display : block
 	transition-property: opacity;
 	transition-duration: 0.4s;  
 }
@@ -82,30 +83,30 @@ textarea:focus ~ #form-help {
 }
 
 #comment-form button {
-	color: rgb(238, 238, 238);
-	font-size: 0.875em;
-	display: inline-block;
-	text-transform: capitalize;
-	font-weight: bold;
-	text-align: center;
-	padding: 0.33em 0.66em;
-	text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
-	border: 1px solid rgb(104, 104, 103);
-	border-radius: 5px;
-	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
-	background-image: linear-gradient(			top , rgb(119, 119, 119) 0px, rgb(85, 85, 85) 100%);
-	background-image: -o-linear-gradient(		top , rgb(119, 119, 119) 0px, rgb(85, 85, 85) 100%);
-	background-image: -moz-linear-gradient(		top , rgb(119, 119, 119) 0px, rgb(85, 85, 85) 100%);
-	background-image: -webkit-linear-gradient(	top , rgb(119, 119, 119) 0px, rgb(85, 85, 85) 100%);
-	background-image: -ms-linear-gradient(		top , rgb(119, 119, 119) 0px, rgb(85, 85, 85) 100%);
-	transition-property: opacity;
-	transition-duration: 0.4s;  
 	position : relative;
+	display : inline-block;
+	top : 0.8em;
 	opacity : 0;
-	top:0.8em;
+	padding : 0.33em 0.66em;
+	border: 1px solid rgb(104, 104, 103);
+	border-radius : 5px;
+	color : rgb(238, 238, 238);
+	font-size : 0.875em;
+	text-transform : capitalize;
+	font-weight : bold;
+	text-align : center;
+	text-shadow : 0px 1px 1px rgba(0, 0, 0, 0.3);
+	box-shadow : 0px 1px 2px rgba(0, 0, 0, 0.2);
+	background-image : linear-gradient(			top , rgb(119, 119, 119) 0px, rgb(85, 85, 85) 100%);
+	background-image : -o-linear-gradient(		top , rgb(119, 119, 119) 0px, rgb(85, 85, 85) 100%);
+	background-image : -moz-linear-gradient(	top , rgb(119, 119, 119) 0px, rgb(85, 85, 85) 100%);
+	background-image : -webkit-linear-gradient(	top , rgb(119, 119, 119) 0px, rgb(85, 85, 85) 100%);
+	background-image : -ms-linear-gradient(		top , rgb(119, 119, 119) 0px, rgb(85, 85, 85) 100%);
+	transition-property : opacity;
+	transition-duration : 0.4s;  
 }
 
 #comment-form.modified [type="submit"] {
+	top : 0em;
 	opacity : 1;
-	top:0em;
 }

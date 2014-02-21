@@ -30,11 +30,13 @@
 .modified .field :invalid {
 	/*border : none;
 	box-shadow: none;*/
+	background : white;
+	/*
 	background-image: linear-gradient(top, rgba(0,0,0,0) 31%, rgba(255,0,0,0.2) 80%);
 	background-image: -o-linear-gradient(top, rgba(0,0,0,0) 31%, rgba(255,0,0,0.2) 80%);
 	background-image: -moz-linear-gradient(top, rgba(0,0,0,0) 31%, rgba(255,0,0,0.2) 80%);
 	background-image: -webkit-linear-gradient(top, rgba(0,0,0,0) 31%, rgba(255,0,0,0.2) 80%);
-	background-image: -ms-linear-gradient(top, rgba(0,0,0,0) 31%, rgba(255,0,0,0.2) 80%);
+	background-image: -ms-linear-gradient(top, rgba(0,0,0,0) 31%, rgba(255,0,0,0.2) 80%);*/
 }
 
 .field input , .field textarea , .field input:focus , .field textarea:focus {
@@ -44,9 +46,21 @@
 	width: 95%;
 }
 
+#comment-1stline {
+	border-bottom : 1px solid #ccc ;
+}
+
 #comment-1stline .field {
-	display : inline-block;
+	float : left;
 	width : 49%;
+}
+
+#comment-2ndline {
+	border-bottom : 1px solid #ccc ;
+}
+
+#c_name {
+	border-right : 1px solid #ccc ;	
 }
 
 #form-help {

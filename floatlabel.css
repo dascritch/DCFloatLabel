@@ -72,6 +72,17 @@
 	border-bottom : 1px solid #cce ;
 }
 
+#comment-4thline , .modified:invalid #comment-4thline {
+	opacity : 0;
+	border-top : 1px solid #cce ;
+	transition-property : opacity;
+	transition-duration : 0.4s;  
+}
+
+.modified #comment-4thline , .modified:valid #comment-4thline {
+	opacity : 1;
+}
+
 #form-help {
 	display : block;
 	opacity: 0;
@@ -85,8 +96,8 @@ textarea:focus ~ #form-help {
 #comment-form button {
 	padding : 0.33em 0.66em;
 	border: 1px solid rgb(104, 104, 103);
-	border-radius : 5px;
 	color : rgb(238, 238, 238);
+	font-family: Titillium Web, sans-serif;
 	font-size : 0.875em;
 	text-transform : capitalize;
 	font-weight : bold;
@@ -101,13 +112,4 @@ textarea:focus ~ #form-help {
 }
 
 
-#comment-4thline , .modified:invalid #comment-4thline {
-	opacity : 0;
-	border-top : 1px solid #cce ;
-	transition-property : opacity;
-	transition-duration : 0.4s;  
-}
 
-.modified #comment-4thline , .modified:valid #comment-4thline {
-	opacity : 1;
-}

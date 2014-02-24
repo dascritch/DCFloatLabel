@@ -106,7 +106,7 @@ textarea:focus ~ #form-help {
 	transition-duration : 0.4s;  
 }
 
-#comment-form.modified [type="submit"] {
+#comment-form.modified button {
 	top : 0em;
 	opacity : 1;
 }

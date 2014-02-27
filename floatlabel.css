@@ -1,14 +1,19 @@
-/** reset sur les sites déjàs placés **/
+/** reset sur les règles déjà placées **/
 
 .field input:focus, .field textarea:focus { /* because compressed l272 */
 	background : none;
 }
 
-/** code réel" **/
- 
-#comment-form {
-	position : relative;
+/** code "réel" sur la section #comment-form **/
+
+/* resets */
+
+#comment-form :invalid {
+	/* reset */
+	border : none;
+	box-shadow : none;
 }
+/* et on y va */
 
 .field {
 	margin : 0;
@@ -17,23 +22,18 @@
 }
 
 .field label { 
+	/* Par défaut, cache le label et le révèlera si l'input se rempli */
 	position: relative;  
 	top:0.8em;
 	opacity : 0; 	
 	transition-property: opacity top;
 	transition-duration: 0.4s;  
 }
-.field.notEmpty label { 
+.field.notEmpty label {
+	/* révèle le label si on commence à remplir l'entrée */
+	/* pour le .notEmpty, je suis obligé de passer par du JS, il n'y a pas de pseudo-classes en CSS pour faire ce que je cherche */
 	top : 0;
 	opacity : 1 ;
-}
-.field :invalid {
-	border : none;
-	box-shadow : none;
-}
-.field :invalid:before {
-	border : none;
-	box-shadow : none;
 }
 
 .field input, .field textarea, .field :focus  {
@@ -54,11 +54,12 @@
 	background-image: -ms-linear-gradient(		top, #EEF 0%, #FFF 30%);
 }
 
-#comment-1stline {
+#comment-1stline, #comment-2ndline {
 	border-bottom : 1px solid #cce ;
 }
 
 @media only screen and (min-width:479px) {
+	/* sur les largeurs qui ont de la place, je mets les champs pseudo et url sur la même ligne */
 	#comment-1stline .field {
 		float : left;
 		width : 49%;
@@ -68,16 +69,13 @@
 	}
 }
 
-#comment-2ndline {
-	border-bottom : 1px solid #cce ;
-}
-
 #form-help {
 	display : block;
 	opacity: 0;
 	transition-property: opacity;
 	transition-duration: 0.4s;  
 }
+
 textarea:focus ~ #form-help {
 	opacity: 1;
 }
@@ -85,8 +83,8 @@ textarea:focus ~ #form-help {
 #comment-form button {
 	padding : 0.33em 0.66em;
 	border: 1px solid rgb(104, 104, 103);
-	border-radius : 5px;
 	color : rgb(238, 238, 238);
+	font-family: Titillium Web, sans-serif;
 	font-size : 0.875em;
 	text-transform : capitalize;
 	font-weight : bold;
@@ -100,14 +98,15 @@ textarea:focus ~ #form-help {
 	background-image : -ms-linear-gradient(		top , rgb(119, 119, 119) 0px, rgb(85, 85, 85) 100%);
 }
 
-
 #comment-4thline , .modified:invalid #comment-4thline {
+	/* par défaut, la ligne du bouton de validation est cachée... */
 	opacity : 0;
-	border-top : 1px solid #cce ;
+	border-top : 1px solid #cce;
 	transition-property : opacity;
 	transition-duration : 0.4s;  
 }
 
 .modified #comment-4thline , .modified:valid #comment-4thline {
+	/* il est révélé soit si le commentaire est valide (si le navigateur le supporte), soit si le formulaire a été touché */
 	opacity : 1;
 }

@@ -131,32 +131,34 @@ Tellement bien raisonné et empli de bon sens que je vais le lire de très très
 	<form action="#pr" method="post" id="comment-form">
 				
 		<h3>Ajouter un commentaire</h3>
+
 		<fieldset id="comment-1stline">
 			<p class="field">
-			<label for="c_name">Nom ou pseudo&nbsp;:</label>
 				<input name="c_name" id="c_name" size="30" maxlength="255" required="required" type="text" placeholder="Nom ou pseudo&nbsp;:">
+				<label for="c_name">Nom ou pseudo&nbsp;:</label>
 			</p>
 			
-			<p class="field" id="g_site"><label for="c_site">Site web (facultatif)&nbsp;:</label>
+			<p class="field" id="g_site">
 				<input name="c_site" id="c_site" size="30" maxlength="255" type="url" placeholder="Site web (facultatif)&nbsp;:">
+				<label for="c_site">Site web (facultatif)&nbsp;:</label>
 			</p>
-
 		</fieldset>
-		<fieldset id="comment-2ndline">
 
-			<p class="field"><label for="c_mail">Adresse e-mail&nbsp;:</label>
+		<fieldset id="comment-2ndline">
+			<p class="field">
 				<input name="c_mail" id="c_mail" size="30" maxlength="255" required="required" type="email" placeholder="Adresse e-mail&nbsp;:">
+				<label for="c_mail">Adresse e-mail&nbsp;:</label>
 			</p>
 			
 			<p style="display:none">
 				<input name="f_mail" size="30" maxlength="255" type="text"  placeholder="Adresse e-mail&nbsp;:">
 			</p>
-			
 		</fieldset>
-		<fieldset id="comment-3rdline">
 
-			<p class="field"><label for="c_content">Commentaire&nbsp;:</label>
+		<fieldset id="comment-3rdline">
+			<p class="field">
 				<textarea name="c_content" id="c_content" cols="35" rows="7" required="required" placeholder="Commentaire&nbsp;:"></textarea>
+				<label for="c_content">Commentaire&nbsp;:</label>
 				<span class="form-help" id="form-help">Le code HTML est affiché comme du texte et les adresses web sont automatiquement transformées.</span>
 			</p>
 		</fieldset>

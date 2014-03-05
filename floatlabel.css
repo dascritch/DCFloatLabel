@@ -7,14 +7,15 @@
 /** code "réel" sur la section #comment-form **/
 
 .field {
+	position: relative;  
 	margin : 0;
-	padding : 0;
+	padding : 1em 0 0;
 	border : 0 1px 1px 1px solid black;
 }
 
 .field label { 
 	/* Par défaut, cache le label et le révèlera si l'input se rempli */
-	position: relative;  
+	position: absolute;  
 	top:0.8em;
 	opacity : 0; 	
 	transition-property: opacity top;
@@ -26,6 +27,10 @@
 	top : 0;
 	opacity : 1 ;
 }
+
+.field.notEmpty :active + label , .field.notEmpty :focus + label {
+	color : blue;
+	}
 
 .field input, .field textarea, .field :focus  {
 	margin  : 0;
@@ -55,15 +60,23 @@
 	border-bottom : 1px solid #cce ;
 }
 
+#g_site {
+	border-left : 1px solid #cce ;
+}
+
 @media only screen and (min-width:479px) {
 	/* sur les largeurs qui ont de la place, je mets les champs pseudo et url sur la même ligne */
 	#comment-1stline .field {
 		float : left;
 		width : 49%;
 	}
+}
+@media only screen and (max-width:480px) {
+	/* sur les largeurs restreinte, on reste sur deux lignes */
 	#g_site {
-		border-left : 1px solid #cce ;
-	}
+		border-top : 1px solid #cce ;
+		border-left : none;
+	}		
 }
 
 #comment-2ndline {

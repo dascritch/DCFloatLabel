@@ -84,29 +84,6 @@
 }
 
 #comment-4thline , .modified:invalid #comment-4thline {
-	opacity : 0;
-	border-top : 1px solid #cce ;
-	transition-property : opacity;
-	transition-duration : 0.4s;  
-}
-
-.modified #comment-4thline , .modified:valid #comment-4thline {
-	opacity : 1;
-}
-
-#form-help {
-	/* l'info technique sur le champ de texte n'est révélé que si le textarea a le focus */
-	display : block;
-	opacity: 0;
-	transition-property: opacity;
-	transition-duration: 0.4s;  
-}
-
-textarea:focus ~ #form-help {
-	opacity: 1;
-}
-
-#comment-4thline , .modified:invalid #comment-4thline {
 	/* par défaut, la ligne du bouton de validation est cachée... */
 	opacity : 0;
 	border-top : 1px solid #cce;
@@ -117,6 +94,17 @@ textarea:focus ~ #form-help {
 .modified #comment-4thline , .modified:valid #comment-4thline {
 	/* il est révélé soit si le commentaire est valide (si le navigateur le supporte), soit si le formulaire a été touché */
 	opacity : 1;
+}
+#form-help {
+	/* l'info technique sur le champ de texte n'est révélé que si le textarea a le focus */
+	display : block;
+	opacity: 0;
+	transition-property: opacity;
+	transition-duration: 0.4s;  
+}
+
+textarea:focus ~ #form-help {
+	opacity: 1;
 }
 
 #comment-form button {

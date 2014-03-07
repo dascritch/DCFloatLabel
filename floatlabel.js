@@ -29,12 +29,13 @@
 		var c_name = document.getElementById('c_name');
 		var c_mail = document.getElementById('c_mail');
 		var c_site = document.getElementById('c_site');
+		var c_s = '#c_name, #c_mail, #c_site';
 
 		function setCookie () {
 			var name = c_name.value;
 			var mail = c_mail.value;
 			var site = c_site.value;
-			var cpath = $('link[rel=top]').attr('href');
+			var cpath = $('link[rel="top"]').attr('href');
 			cpath = (!cpath) ? '/' : cpath.replace(/.*:\/\/[^\/]*([^?]*).*/g,"$1");
 			$.cookie('comment_info', name+'\n'+mail+'\n'+site, {expires:60,path:cpath});
 		}
@@ -56,17 +57,17 @@
 		var $latestp = $('button[name="preview"]',$commentform).closest('p');
 		var post_remember_str = $latestp.data('remember');
 		$latestp.append('<input type="checkbox" id="c_remember" name="c_remember" /> '+'<label for="c_remember">'+post_remember_str+'</label>');
-		var $remember = $('#c_remember');
+		var remember = document.getElementById('c_remember');
 
 		var cookie=readCookie($.cookie('comment_info'));
 		if (cookie !== false) {
 	    	c_name.value = cookie[0];
 	    	c_mail.value = cookie[1];
 	    	c_site.value = cookie[2];
-	    	$remember.prop('checked',true);
-			$('#c_name, #c_mail, #c_site').closest(tagIfEmpty).addClass(markedNotEmpty);
+	    	remember.checked = true;
+			$(c_s).closest(tagIfEmpty).addClass(markedNotEmpty);
 	    }
-		$remember.on('click',function(){
+		$(remember).on('click',function(){
 			if (this.checked) {
 				setCookie();
 			} else {
@@ -74,8 +75,8 @@
 			}
 		}
 		);
-		$commentform.on('change','#c_name, #c_mail, #c_site',function(){
-			if ($remember.get(0).checked) {
+		$commentform.on('change',c_s,function(){
+			if (remember.checked) {
 				setCookie();
 			}
 		});

@@ -49,7 +49,7 @@
 		</fieldset>
 		
 		<fieldset id="comment-4thline">
-			<p class="remember">
+			<p class="remember" data-remember="{{tpl:lang Remember me on this blog}}">
 				<button class="preview" name="preview" id="preview" type="submit">prévisualiser</button>
 				<label class="form-help" for="preview">(votre texte sera publié après validation)</label>
 			</p>

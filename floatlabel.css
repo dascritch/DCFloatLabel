@@ -6,13 +6,6 @@
 
 /** code "réel" sur la section #comment-form **/
 
-.field {
-	position: relative;  
-	margin : 0;
-	padding : 1em 0 0;
-	border : 0 1px 1px 1px solid black;
-}
-
 .field label { 
 	/* Par défaut, cache le label et le révèlera si l'input se rempli */
 	position: absolute;  
@@ -56,11 +49,18 @@
 	background-image: -ms-linear-gradient(		top, #EEF 0%, #FFF 30%);
 }
 
-#comment-1stline, #comment-2ndline {
-	border-bottom : 1px solid #cce ;
+#comment-form p {
+	position: relative;  
+	margin : 0;
+	padding : 1em 0 0;
+	border-top : 1px solid #cce ;
 }
 
-#g_site {
+#comment-1stline p  {
+	border : none;
+}
+
+#comment-1stline #g_site {
 	border-left : 1px solid #cce ;
 }
 
@@ -73,28 +73,24 @@
 }
 @media only screen and (max-width:480px) {
 	/* sur les largeurs restreinte, on reste sur deux lignes */
-	#g_site {
+	#comment-1stline #g_site {
 		border-top : 1px solid #cce ;
 		border-left : none;
 	}		
 }
 
-#comment-2ndline {
-	border-bottom : 1px solid #cce ;
-}
-
 #comment-4thline , .modified:invalid #comment-4thline {
 	/* par défaut, la ligne du bouton de validation est cachée... */
 	opacity : 0;
-	border-top : 1px solid #cce;
 	transition-property : opacity;
-	transition-duration : 0.4s;  
+	transition-duration : 0.4s; 
 }
 
 .modified #comment-4thline , .modified:valid #comment-4thline {
 	/* il est révélé soit si le commentaire est valide (si le navigateur le supporte), soit si le formulaire a été touché */
 	opacity : 1;
 }
+
 #form-help {
 	/* l'info technique sur le champ de texte n'est révélé que si le textarea a le focus */
 	display : block;

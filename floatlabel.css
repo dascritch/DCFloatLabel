@@ -64,14 +64,14 @@
 	border-left : 1px solid #cce ;
 }
 
-@media only screen and (min-width:479px) {
+@media only screen and (max-width:479px) {
 	/* sur les largeurs qui ont de la place, je mets les champs pseudo et url sur la même ligne */
 	#comment-1stline .field {
 		float : left;
 		width : 49%;
 	}
 }
-@media only screen and (max-width:480px) {
+@media only screen and (min-width:480px) {
 	/* sur les largeurs restreinte, on reste sur deux lignes */
 	#comment-1stline #g_site {
 		border-top : 1px solid #cce ;

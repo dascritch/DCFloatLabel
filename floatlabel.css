@@ -81,7 +81,7 @@
 
 #comment-4thline , .modified:invalid #comment-4thline {
 	/* par défaut, la ligne du bouton de validation est cachée... */
-	opacity : 0;
+	opacity : 0.4;
 	transition-property : opacity;
 	transition-duration : 0.4s; 
 }
